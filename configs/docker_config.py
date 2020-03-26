@@ -78,7 +78,7 @@ for v in legal_envvars:
     elif v in os.environ:
         ret = os.environ[v]
 
-    if ret not None:
+    if ret is not None:
         if v in legal_envvars_bool:
             ret = bool(ret)
         if v in legal_envvars_int:
